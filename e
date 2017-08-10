@@ -1,1 +1,0 @@
-本项目使用servlet +hibernate搭建服务器
