@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.bdqn.shopvisit.bean.Announcement" table="announcement">
+		<id name="id" type="integer" column="id"  length="11">
+			<generator class="native"></generator>
+		</id>
+		<property name="imgUrl" type="string" length="128"></property>
+		<property name="detailUrl" type="string" length="128"></property>
+		<property name="createDate" type="string" length="10"></property>
+		<property name="state" type="int" length="1"></property>
+	</class>
+</hibernate-mapping>

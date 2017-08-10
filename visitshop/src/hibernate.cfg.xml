@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/shopvisit?useUnicode=true&amp;characterEncoding=UTF-8</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">1</property>
+
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- <property name="dialect">org.hibernate.dialect.MySQLDialect</property> 
+			<property name="dialect">org.hibernate.dialect.MySQLInnoDBDialect</property> 
+			<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property> 
+			<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property> -->
+
+
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+		<property name="show_sql">true</property>
+
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">update</property>
+
+		<mapping resource="com/bdqn/shopvisit/bean/User.hbm.xml" />
+		<mapping resource="com/bdqn/shopvisit/bean/Visit.hbm.xml" />
+		<mapping resource="com/bdqn/shopvisit/bean/Shop.hbm.xml" />
+		<mapping resource="com/bdqn/shopvisit/bean/Train.hbm.xml" />
+		<mapping resource="com/bdqn/shopvisit/bean/TrainData.hbm.xml" />
+		<mapping resource="com/bdqn/shopvisit/bean/Interview.hbm.xml" />
+		<mapping resource="com/bdqn/shopvisit/bean/Customer.hbm.xml" />
+		<mapping resource="com/bdqn/shopvisit/bean/AppInfo.hbm.xml" />
+		<mapping resource="com/bdqn/shopvisit/bean/Task.hbm.xml" />
+		<mapping resource="com/bdqn/shopvisit/bean/FeedBack.hbm.xml" />
+		<mapping resource="com/bdqn/shopvisit/bean/Info.hbm.xml" />
+		<mapping resource="com/bdqn/shopvisit/bean/Announcement.hbm.xml" />
+	</session-factory>
+
+</hibernate-configuration>

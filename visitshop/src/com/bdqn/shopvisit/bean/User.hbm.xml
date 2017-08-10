@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.bdqn.shopvisit.bean.User" table="user">
+		<id name="id" type="integer" column="id" length="11">
+			<generator class="native"></generator>
+		</id>
+		<property name="userId" type="string" length="16"></property>
+		<property name="passWord" type="string" length="255"></property>
+		<property name="job" type="string" length="16"></property>
+		<property name="nickName" type="string" length="32"></property>
+		<property name="sex" type="int" length="1"></property>
+		<property name="phoneNum" type="string" length="11"></property>
+		<property name="img" type="string" length="255"></property>
+		<property name="registDate" type="string" length="10"></property>
+		<property name="area" type="string" length="10"></property>
+	</class>
+</hibernate-mapping>
